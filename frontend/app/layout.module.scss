@@ -1,0 +1,11 @@
+@use '@carbon/layout';
+
+.layoutContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 980px;
+  margin: auto;
+  padding: layout.$spacing-06;
+  padding-top: 0;
+}

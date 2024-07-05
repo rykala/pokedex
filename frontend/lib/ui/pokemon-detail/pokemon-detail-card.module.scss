@@ -1,0 +1,104 @@
+@use '@carbon/themes';
+@use '@carbon/layout';
+@use '@carbon/colors';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid themes.$border-subtle-01;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  display: grid;
+  padding: layout.$spacing-06;
+
+  .image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    margin: auto;
+  }
+
+  .soundContainer {
+    position: absolute;
+    bottom: layout.$spacing-03;
+    left: layout.$spacing-03;
+  }
+}
+
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  background: themes.$layer-01;
+  padding: layout.$spacing-04 layout.$spacing-03;
+  gap: layout.$spacing-03;
+
+  .textsAndFavoriteContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .nameText {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .typeText {
+    font-size: 0.8rem;
+  }
+}
+
+
+.measuresContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: themes.$layer-01;
+
+  .measuresItem {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid themes.$border-subtle-01;
+    padding: layout.$spacing-06;
+    gap: layout.$spacing-03;
+
+    &:not(:last-child) {
+      border-right: 1px solid themes.$border-subtle-01;
+    }
+  }
+}
+
+
+.barContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: layout.$spacing-03;
+
+  @mixin createBar($color) {
+    height: 12px;
+    width: 100%;
+    border-radius: 8px;
+    background: $color;
+  }
+
+  .hpBar {
+    @include createBar($color: #73c0a2);
+  }
+
+  .cpBar {
+    @include createBar($color: #a0a1fc);
+  }
+}

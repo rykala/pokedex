@@ -1,0 +1,22 @@
+@use '@carbon/layout';
+
+.filtersContainer {
+  display: flex;
+  flex-direction: column;
+  gap: layout.$spacing-03;
+}
+
+.inputsContainer {
+  display: flex;
+  gap: layout.$spacing-03;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.searchInputContainer {
+  flex-grow: 1;
+}
+
+.typeSelectContainer {
+  width: 170px;
+}

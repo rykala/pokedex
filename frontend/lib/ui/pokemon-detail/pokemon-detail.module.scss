@@ -1,0 +1,18 @@
+@use '@carbon/layout';
+
+.evolutionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: layout.$spacing-03;
+  margin-top: layout.$spacing-06;
+
+  .evolutionsHeader {
+    font-weight: bold;
+  }
+
+  .evolutionsListContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: layout.$spacing-06;
+  }
+}

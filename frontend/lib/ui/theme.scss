@@ -1,0 +1,24 @@
+@use '@carbon/react/scss/themes';
+
+//overriding theme tokens and adding a custom token
+@use '@carbon/react/scss/theme' with (
+  $theme: (
+    primary-color: #63bd8e,
+  )
+);
+
+// override a component token
+@use '@carbon/react/scss/components/button/tokens' as button-tokens with (
+    $button-primary: theme.get('primary-color'),
+    $button-primary-active:theme.get('primary-color'),
+    $button-primary-hover: darken(theme.get('primary-color'), 10%),
+    $button-tertiary: theme.get('primary-color'),
+    $button-tertiary-active: theme.get('primary-color'),
+    $button-tertiary-hover: theme.get('primary-color'),
+);
+
+@use '@carbon/react';
+
+.bold {
+    font-weight: bold;
+}

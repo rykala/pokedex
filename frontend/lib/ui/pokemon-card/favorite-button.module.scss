@@ -1,0 +1,12 @@
+@use '@carbon/layout';
+
+.favoriteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: layout.$spacing-02;
+
+  svg {
+    fill: #ff4646 !important;
+  }
+}
